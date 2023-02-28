@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+h1{
+    font-weight: 700;
+}
+
+.faq ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.faq ul li{
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    padding-bottom: 15px;
+}
+
+.faq .question{
+    cursor: pointer;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.faq .question img{
+    width: min-content;
+    transition: .7s;
+}
+
+.faq .question.active{
+    font-weight: 700;
+}
+
+
+.faq .question.active img{
+    transform: rotate(180deg);
+    transition: .7s;
+}
+
+.faq .answer{
+    padding: 10px 0px;
+    display: none;
+}
+
+@media screen and (max-width: 1440px) {
+    .container{
+        padding: 100px 0px;
+        display: flex;
+        justify-content: center;
+    }
+    .faq-container{
+        display: flex;
+        align-items: center;
+        width: 700px;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 0px 40px;
+    }
+    .img, .faq{
+        width: 50%;
+    }
+    .img{
+        position: relative;
+    }
+    .img img{
+        width: 300px;
+    }
+    .faq{
+        padding: 40px 50px;
+    }
+    .faq ul li{
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 375px){
+    .faq-container{
+        display: block;
+        justify-content: center;
+        padding: 0px 15px;
+    }
+    .faq{
+        padding: 0px 0px;
+        width: 100%;
+        margin-top: 90px;
+    }
+    .faq h1{
+        text-align: center;
+    }
+    .img img{
+        width: 200px;
+        position: absolute;
+        top: -90px;
+        left: 35px;
+    }
+}
